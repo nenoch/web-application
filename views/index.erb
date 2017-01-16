@@ -1,4 +1,11 @@
 <div>
+  <% if @name %>
   <h1>My name is <%=@name%></h1>
+  <% else %>
+  <form action="/named-cat">
+    <input type="text" name="name"/>
+    <input type="submit" value="Name me!" style="background:#eee"/>
+  </form>
+  <% end %>
   <img src='http://static.boredpanda.com/blog/wp-content/uploads/2015/12/fluffy-cats-funny-animal-pics-12__605.jpg' style='border: 2px solid #CCC;'>
 </div>
